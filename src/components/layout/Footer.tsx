@@ -5,8 +5,8 @@ import NewsletterForm from "../common/NewsletterForm";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="border-t-[color:var(--Secondary-100,#E8E8EA)] bg-[#F6F6F7] dark:bg-zinc-900 dark:border-zinc-800 w-full mt-[100px] pt-16 px-[352px] border-t border-solid max-md:max-w-full max-md:mt-10 max-md:px-5">
-      <div className="flex justify-between gap-5 flex-wrap max-md:max-w-full">
+    <footer className="border-t-[color:var(--Secondary-100,#E8E8EA)] bg-[#F6F6F7] dark:bg-zinc-900 dark:border-zinc-800 w-full mt-[100px] pt-16 px-4 md:px-8 border-t border-solid max-md:max-w-full max-md:mt-10 max-md:px-5">
+      <div className="flex justify-between gap-5 flex-wrap max-w-7xl mx-auto w-full">
         <div className="flex flex-col items-stretch max-w-[280px]">
           <div className="text-[#181A2A] dark:text-white text-lg font-semibold leading-loose">
             About

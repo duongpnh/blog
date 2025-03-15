@@ -115,50 +115,22 @@ const posts = [
 
 export const LatestPosts: React.FC = () => {
   return (
-    <div className="items-center flex w-full max-w-[1216px] flex-col mt-20 max-md:max-w-full max-md:mt-10">
-      <div className="self-stretch flex-1 shrink basis-[0%] w-full gap-8 text-2xl text-[#181A2A] font-bold leading-none max-md:max-w-full">
+    <div className="items-center flex w-full max-w-[1216px] flex-col mt-20 max-md:mt-10">
+      <div className="self-stretch flex-1 shrink basis-[0%] w-full gap-8 text-2xl text-[#181A2A] dark:text-gray-200 font-bold leading-none">
         Latest Post
       </div>
-      <div className="mt-8 max-md:max-w-full">
-        <div className="flex gap-5 flex-wrap max-md:max-w-full">
-          {posts.slice(0, 3).map((post) => (
-            <PostCard
-              key={post.id}
-              imageSrc={post.imageSrc}
-              title={post.title}
-              category={post.category}
-              authorName={post.authorName}
-              authorImageSrc={post.authorImageSrc}
-              date={post.date}
-            />
-          ))}
-        </div>
-        <div className="flex gap-5 flex-wrap mt-5 max-md:max-w-full">
-          {posts.slice(3, 6).map((post) => (
-            <PostCard
-              key={post.id}
-              imageSrc={post.imageSrc}
-              title={post.title}
-              category={post.category}
-              authorName={post.authorName}
-              authorImageSrc={post.authorImageSrc}
-              date={post.date}
-            />
-          ))}
-        </div>
-        <div className="flex gap-5 flex-wrap mt-5 max-md:max-w-full">
-          {posts.slice(6, 9).map((post) => (
-            <PostCard
-              key={post.id}
-              imageSrc={post.imageSrc}
-              title={post.title}
-              category={post.category}
-              authorName={post.authorName}
-              authorImageSrc={post.authorImageSrc}
-              date={post.date}
-            />
-          ))}
-        </div>
+      <div className="w-full mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {posts.map((post) => (
+          <PostCard
+            key={post.id}
+            imageSrc={post.imageSrc}
+            title={post.title}
+            category={post.category}
+            authorName={post.authorName}
+            authorImageSrc={post.authorImageSrc}
+            date={post.date}
+          />
+        ))}
       </div>
       <button className="self-stretch border gap-3 overflow-hidden text-base text-[#696A75] font-medium mt-8 px-5 py-3 rounded-md border-[rgba(105,106,117,0.3)] border-solid hover:bg-gray-50 transition-colors">
         View All Post
